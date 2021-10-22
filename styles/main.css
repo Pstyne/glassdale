@@ -9,7 +9,7 @@
   justify-content: space-evenly;
 }
 
-.criminal, .officer, .facility {
+.criminal, .officer, .facility, .note {
   border: 1px dotted #000;
   flex-basis: 250px;
   margin: 2em;
