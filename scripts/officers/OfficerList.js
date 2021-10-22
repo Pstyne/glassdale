@@ -10,9 +10,7 @@ export const OfficerList = () => {
   .then(() => {
     const officers = useOfficers();
 
-    officers.forEach( officerObj => {
-      html += Officer(officerObj);
-    });
+    officers.forEach( officerObj => html += Officer(officerObj));
     
     el.innerHTML = html;
   });

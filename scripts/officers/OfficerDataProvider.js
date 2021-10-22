@@ -1,3 +1,5 @@
+import { urlBuilder } from '../helpers/urlBuilder.js';
+
 let officers = [];
 
 export const useOfficers = () => {
@@ -5,7 +7,7 @@ export const useOfficers = () => {
 }
 
 export const getOfficers = () => {
-  return fetch('https://criminals.glassdale.us/officers')
+  return fetch(urlBuilder('officers'))
           .then( res => res.json())
           .then( data => officers = data);
 }
