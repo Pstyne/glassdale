@@ -16,17 +16,20 @@ export const CriminalList = () => {
     const criminals = useCriminals();
 
     html += `
+    <!-- Begin Criminal List -->
     <section class="criminals">
       <h2>Criminals</h2>
       <div class="convictions-select-container"></div>
       <div class="criminal-list flex-container">
-      <!-- Begin Criminal List -->
     `;
 
     criminals.forEach( criminalObj => html += Criminal(criminalObj));
 
-    el.innerHTML += html;
-    html += `</div>
-    </section>`
+    html += `
+      </div>
+    </section>
+    `;
+    
+    el.innerHTML = html;
   });     
 }
