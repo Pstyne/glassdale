@@ -1,3 +1,8 @@
+.dark-background {
+  background-color: #2b362e;
+  color: #fafcfb;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
