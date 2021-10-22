@@ -4,7 +4,7 @@
   justify-content: space-evenly;
 }
 
-.criminal {
+.criminal, .officer {
   border: 1px dotted #000;
   flex-basis: 250px;
   margin: 2em;
