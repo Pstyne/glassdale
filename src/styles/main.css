@@ -1,12 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Noto+Sans+Mono:wght@500&family=Roboto:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* font-family: 'Noto Sans Mono', monospace; */
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+nav {
+  background-color: #c23a3a;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+form input, form textarea {
+  border: 2px solid #2b362e;
+  width: 250px;
+}
+
+form textarea {
+  border-width: 2px;
+  height: 150px;
+}
+
+.clear-float {
+  clear: both;
+}
+
+#note-suspect {
+  height: 20px;
+}
+
+#dark-mode, #saveNote {
+  padding: .5em;
+  font-family: 'Noto Sans Mono', monospace;
+  background-color: #2b362e;
+  color: #fff;
+  border-style: none;
+  margin: 2em 0;
+}
+
+#dark-mode {
+  margin-left: 1em;
+}
+
 .dark-background {
   background-color: #2b362e;
   color: #fafcfb;
+}
+
+.dark-background nav {
+  background-color: #3c679e;
+}
+
+.dark-background #dark-mode, .dark-background #saveNote {
+  background-color: #fff;
+  color: #2b362e;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.note-form-container, .main-content {
+  padding: 1em;
+}
+
+.note-form-container {
+  width: 20%;
+  float: left;
+}
+
+.photo-near-form {
+  float: left;
+}
+
+.headline-text {
+  font-size: 1.5em;
+  font-family: 'Noto Sans Mono', monospace;
 }
 
 .criminal, .officer, .facility, .note {
