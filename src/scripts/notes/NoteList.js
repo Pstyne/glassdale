@@ -12,7 +12,8 @@ export const NoteList = () => {
 
   getNotes()
   .then(() => {
-    const notes = useNotes();
+    // Show newest notes first
+    const notes = useNotes().sort((q, n) => n.id - q.id);
 
     html += `
       <section class="notes">
