@@ -44,6 +44,11 @@ a {
 form input, form textarea {
   border: 2px solid #2b362e;
   width: 250px;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+form input {
+  height: 30px;
 }
 
 form textarea {
@@ -53,10 +58,6 @@ form textarea {
 
 .clear-float {
   clear: both;
-}
-
-#note-suspect {
-  height: 20px;
 }
 
 #dark-mode, #saveNote {
@@ -89,7 +90,7 @@ form textarea {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .note-form-container, .main-content {
@@ -97,22 +98,30 @@ form textarea {
 }
 
 .note-form-container {
-  width: 20%;
-  float: left;
+  width: 260px;
+  border: 2px solid #2b362e;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 1em;
 }
 
-.photo-near-form {
-  float: left;
-}
-
-.headline-text {
+.headline-text, form div {
   font-size: 1.5em;
   font-family: 'Noto Sans Mono', monospace;
 }
 
 .criminal, .officer, .facility, .note {
-  border: 1px dotted #000;
-  flex-basis: 250px;
-  margin: 2em;
+  border: 2px solid #2b362e;
+  border-radius: 5px;
+  flex-basis: 500px;
+  margin: 2em 2em 2em 0;
   padding: 2em;
+}
+
+.dark-background .criminal, 
+.dark-background .officer,
+.dark-background .facility, 
+.dark-background .note,
+.dark-background .note-form-container {
+  border-color: #fff;
 }

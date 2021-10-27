@@ -55,11 +55,11 @@ export const NoteForm = () => {
     <div>
       <label>Suspect:</label>
     </div>
-      <input type="text" id="note-suspect">
+      <input type="text" id="note-suspect" placeholder="Who's Looking Sus?">
     <div>
       <label>Note:</label>
     </div>
-      <textarea id="note-text"></textarea>
+      <textarea id="note-text" placeholder="What is Making them Sus?!"></textarea>
     <div>
       <button id="saveNote">Save Note</button>
     </div>
