@@ -60,7 +60,7 @@ form textarea {
   clear: both;
 }
 
-#dark-mode, #saveNote, button[id^=deleteNote] {
+#dark-mode, #saveNote, button[id^=deleteNote], button[id^=editNote] {
   padding: .5em;
   font-family: 'Noto Sans Mono', monospace;
   background-color: #2b362e;

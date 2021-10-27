@@ -21,6 +21,17 @@ export const saveNote = note => {
   .then(getNotes)
 }
 
+export const updateNote = note => {
+  // console.log(note)
+  return fetch(`http://localhost:8088/notes/${note.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(note)
+  });
+}
+
 export const deleteNote = note => {
   return fetch(`http://localhost:8088/notes/${note}`, {
     method: "DELETE"
