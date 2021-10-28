@@ -1,5 +1,5 @@
-import { deleteNote } from "./NoteDataProvider.js";
-import { NoteEditForm } from "./NoteEditForm.js";
+import { deleteNote, useNotes } from "./NoteDataProvider.js";
+import { NoteForm } from "./NoteForm.js";
 import { NoteList } from "./NoteList.js";
 
 const mainContentEvents = document.querySelector('.main-content');
@@ -8,7 +8,8 @@ mainContentEvents.addEventListener('click', e => {
   const noteId = e.target.id.split('--')[1];
   
   if (e.target.id.startsWith('editNote')) {
-    NoteEditForm(noteId);
+    const note = useNotes().find( note => note.id.toString() === noteId);
+    NoteForm(note);
   }
   
   if (e.target.id.startsWith('deleteNote')) {

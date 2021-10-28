@@ -38,7 +38,7 @@ const handleEdit = e => {
   }
 }
 
-noteEditFormContainer.addEventListener('click', handleEdit);
+// noteEditFormContainer.addEventListener('click', handleEdit);
 
 export const NoteEditForm = id => {
   const noteToEdit = useNotes().find( note => note.id.toString() === id);
