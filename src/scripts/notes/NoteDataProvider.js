@@ -18,11 +18,10 @@ export const saveNote = note => {
     },
     body: JSON.stringify(note)
   })
-  .then(getNotes)
+  .then(getNotes);
 }
 
 export const updateNote = note => {
-  // console.log(note)
   return fetch(`http://localhost:8088/notes/${note.id}`, {
     method: "PUT",
     headers: {

@@ -14,9 +14,9 @@ window.onload = () => {
       e.preventDefault();
 
       // Convert the date from it's default value
-      const noteDate = new Date(document.querySelector('#note-date').value).toLocaleDateString('en-US');
+      const noteDate = new Date(document.querySelector('#note-date').value.split('-')).toLocaleDateString('en-US', { year: "numeric", day: "numeric", month: "numeric"});
       
-      const newNote = {
+      const noteData = {
         date: noteDate,
         suspect: document.querySelector('#note-suspect').value,
         text: document.querySelector('#note-text').value
@@ -30,7 +30,7 @@ window.onload = () => {
 
 
       // If any of the form values are empty then display where valid information is needed
-      if (newNote.date === 'Invalid Date' || newNote.suspect === '' || newNote.text === '') {
+      if (noteData.date === 'Invalid Date' || noteData.suspect === '' || noteData.text === '') {
         alert('Please enter valid values')
 
       // Otherwise we can go ahead and make this a new note
@@ -38,7 +38,7 @@ window.onload = () => {
 
 
 
-        saveNote(newNote)
+        saveNote(noteData)
         .then(NoteList);
       }
     }
