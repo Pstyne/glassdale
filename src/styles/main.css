@@ -59,7 +59,7 @@ form textarea {
   height: 150px;
 }
 
-#filters__crime {
+.filters__crime {
   margin: 1em;
   padding: 1em;
 }
@@ -90,7 +90,7 @@ form textarea {
   background-color: #3c679e;
 }
 
-.dark-background #dark-mode, .dark-background #saveNote {
+.dark-background #dark-mode, .dark-background #saveNote, .dark-background button[id^=deleteNote], .dark-background button[id^=editNote] {
   background-color: #fff;
   color: #2b362e;
 }
