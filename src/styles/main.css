@@ -6,8 +6,11 @@
 }
 
 body {
-  /* font-family: 'Noto Sans Mono', monospace; */
   font-family: 'Roboto', sans-serif;
+}
+
+body, nav, button, .note-form-container {
+  transition: all .5s ease-in;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,19 +44,24 @@ a {
   color: #fff;
 }
 
-form input, form textarea {
+form input, form textarea, #crimeSelect {
   border: 2px solid #2b362e;
   width: 250px;
   font-family: 'Noto Sans Mono', monospace;
 }
 
-form input {
+form input, #crimeSelect {
   height: 30px;
 }
 
 form textarea {
   border-width: 2px;
   height: 150px;
+}
+
+#filters__crime {
+  margin: 1em;
+  padding: 1em;
 }
 
 .clear-float {

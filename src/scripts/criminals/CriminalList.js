@@ -7,13 +7,17 @@ document.querySelector("#criminals-nav-link").addEventListener("click", function
   CriminalList();          
 });
 
-export const CriminalList = () => {
+export const CriminalList = (convictionType) => {
   
   let html = '';
   
   getCriminals()
   .then(() => {
-    const criminals = useCriminals();
+
+    // If convictionType is undefined then just pull all criminals
+    const criminals = convictionType ? 
+      useCriminals().filter( criminal => criminal.conviction === convictionType) :
+      useCriminals();
 
     html += `
     <!-- Begin Criminal List -->
