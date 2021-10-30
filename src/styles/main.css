@@ -44,13 +44,13 @@ a {
   color: #fff;
 }
 
-form input, form textarea, #crimeSelect {
+form input, form textarea, #crimeSelect, #officerSelect {
   border: 2px solid #2b362e;
   width: 250px;
   font-family: 'Noto Sans Mono', monospace;
 }
 
-form input, #crimeSelect {
+form input, #crimeSelect, #officerSelect {
   height: 30px;
 }
 
@@ -59,9 +59,15 @@ form textarea {
   height: 150px;
 }
 
-.filters__crime {
-  margin: 1em;
-  padding: 1em;
+.group, .filters {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.filters__crime, .filters__officer {
+  margin: 1em 0;
+  padding: 1em 0;
+  display: inline-block;
 }
 
 .clear-float {
@@ -132,4 +138,42 @@ form textarea {
 .dark-background .note,
 .dark-background .note-form-container {
   border-color: #fff;
+}
+
+body::-webkit-scrollbar,
+body.dark-background::-webkit-scrollbar, 
+.dropdown::-webkit-scrollbar,
+.dark-background .dropdown::-webkit-scrollbar {
+  width: .5em;
+  background-color: #666;
+}
+
+body::-webkit-scrollbar,
+.dropdown::-webkit-scrollbar {
+  background-color: #666;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+body.dark-background::-webkit-scrollbar {
+  background-color: #999;
+  border-left: 2px solid #2b362e;
+  border-right: 2px solid #2b362e;
+}
+
+body::-webkit-scrollbar-button,
+body.dark-background::-webkit-scrollbar-button, 
+.dropdown::-webkit-scrollbar-button,
+.dark-background .dropdown::-webkit-scrollbar-button {
+  height: 0;
+}
+
+body::-webkit-scrollbar-thumb,
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #a12a2a;
+}
+
+body.dark-background::-webkit-scrollbar-thumb, 
+.dark-background .dropdown::-webkit-scrollbar-thumb {
+  background-color: #3a587e;
 }

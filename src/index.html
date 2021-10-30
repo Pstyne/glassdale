@@ -25,10 +25,23 @@
     </ul>
   </nav>
   <div class="note-form-container"></div>
-  <img class="photo-near-form" src="images/aucop.png" alt="Glassdale Imposter" srcset="">
-  <button id="dark-mode">Dark Mode</button>
+  <div class="group">
+    <div class="photo-near-form">
+      <img src="images/aucop.png" alt="Glassdale Imposter" srcset="">
+    </div>
+    <button id="dark-mode">Imposter Mode</button>
+  </div>
   <!-- <div class="clear-float"></div> -->
-  <div class="filters__crime"></div>
+  <div class="filters">
+    <div class="group">
+      <h3>Filter Criminals by Offense</h3>
+      <div class="filters__crime"></div>
+    </div>
+    <div class="group">
+      <h3>Filter Criminals by Arresting Officer</h3>
+      <div class="filters__officer"></div>
+    </div>
+  </div>
   <main class="main-content">
     <h1>Glassdale PD</h1>
     <p class="headline-text">This is the interface where you will query criminals, officers, facilities and notes!</p>

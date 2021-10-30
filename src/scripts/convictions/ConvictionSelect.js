@@ -11,7 +11,7 @@ selectTarget.addEventListener('change', e => {
     const convictionID = e.target.value;
     const convictionType = e.target[convictionID].innerText;
     
-    CriminalList(convictionType);
+    CriminalList('conviction', convictionType);
   }
   
 });

@@ -7,16 +7,20 @@ document.querySelector("#criminals-nav-link").addEventListener("click", function
   CriminalList();          
 });
 
-export const CriminalList = (convictionType) => {
+// @params
+//  prop: string (ex. criminal.arrestingOfficer where prop is 'arrestingOfficer') 
+//  value: string (ex. 'Gino Hill')
+//  ex. useCriminals().filter( criminal => criminal['arrestingOfficer'] === 'Gino Hill')
+export const CriminalList = (prop, val) => {
   
   let html = '';
   
   getCriminals()
   .then(() => {
 
-    // If convictionType is undefined then just pull all criminals
-    const criminals = convictionType ? 
-      useCriminals().filter( criminal => criminal.conviction === convictionType) :
+    // If property to filter and value to search is undefined then just pull all criminals
+    const criminals = (prop && val) ? 
+      useCriminals().filter( criminal => criminal[prop] === val) :
       useCriminals();
 
     html += `
