@@ -44,14 +44,18 @@ a {
   color: #fff;
 }
 
-form input, form textarea, #crimeSelect, #officerSelect {
+form input, form textarea, #crimeSelect, #officerSelect, .criminalSelect {
   border: 2px solid #2b362e;
   width: 250px;
   font-family: 'Noto Sans Mono', monospace;
 }
 
-form input, #crimeSelect, #officerSelect {
+form input, #crimeSelect, #officerSelect, .criminalSelect {
   height: 30px;
+}
+
+.criminalSelect {
+  width: 254px;
 }
 
 form textarea {

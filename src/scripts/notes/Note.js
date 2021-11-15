@@ -1,3 +1,4 @@
+import { CriminalSelect } from "../criminals/CriminalSelect.js";
 import { deleteNote, useNotes } from "./NoteDataProvider.js";
 import { NoteForm } from "./NoteForm.js";
 import { NoteList } from "./NoteList.js";
@@ -10,6 +11,7 @@ mainContentEvents.addEventListener('click', e => {
   if (e.target.id.startsWith('editNote')) {
     const note = useNotes().find( note => note.id.toString() === noteId);
     NoteForm(note);
+    CriminalSelect(note.criminalId);
   }
   
   if (e.target.id.startsWith('deleteNote')) {

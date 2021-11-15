@@ -1,5 +1,6 @@
 import { NoteList } from "./NoteList.js";
 import { saveNote, updateNote } from "./NoteDataProvider.js";
+import { CriminalSelect } from "../criminals/CriminalSelect.js";
 
 const newNote = { date: Date.now(), id: "", suspect: "", text: ""};
 
@@ -15,29 +16,21 @@ el.addEventListener("click", e => {
     // Convert the date from it's default value
     const noteDate = new Date(document.querySelector('#note-date').value.split('-')).toLocaleDateString('en-US', { year: "numeric", day: "numeric", month: "numeric"});
 
-    // Ternary object assignment spaghetti
-    // noteData will be edited if it has a note id attached to it
-    // or else its going to be a new note without an id
-    const noteData = el.querySelector('#note-id').value ? {
+    const noteData = {
       date: noteDate,
-      suspect: document.querySelector('#note-suspect').value,
+      criminalId: document.querySelector('#noteForm--criminal').value,
       text: document.querySelector('#note-text').value,
       id: document.querySelector('#note-id').value
-    } : {
-      date: noteDate,
-      suspect: document.querySelector('#note-suspect').value,
-      text: document.querySelector('#note-text').value,
-      id: ''
-    }
+    } 
 
     // Clear form values after creating form body data
     document.querySelector('#note-date').value = '';
-    document.querySelector('#note-suspect').value = '';
     document.querySelector('#note-text').value = '';
     document.querySelector('#note-id').value = '';
+    document.querySelector('#noteForm--criminal').value = '0';
 
     // If any of the form values are empty then display where valid information is needed
-    if (noteData.date === 'Invalid Date' || noteData.suspect === '' || noteData.text === '') {
+    if (noteData.date === 'Invalid Date' || noteData.criminalId === '0' || noteData.text === '') {
       alert('Please enter valid values')
 
     // Otherwise we can go ahead and make this a new note, or update note
@@ -72,7 +65,7 @@ export const NoteForm = (note = newNote) => {
     <div>
       <label>Suspect:</label>
     </div>
-      <input type="text" id="note-suspect" placeholder="Who's Looking Sus?" value="${note.suspect}">
+    <div class="criminal-select-container"></div>
     <div>
       <label>Note:</label>
     </div>

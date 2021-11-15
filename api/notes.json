@@ -1,46 +1,16 @@
 {
   "notes": [
     {
-      "date": "10/24/2021",
-      "suspect": "tommy",
-      "text": "tommy did bad stuff",
-      "id": 30
+      "date": "11/15/2021",
+      "criminalId": "1",
+      "text": "She really tested me and i edited this note",
+      "id": 39
     },
     {
-      "date": "10/27/2021",
-      "suspect": "sussy mcsusserson",
-      "text": "isnt acting right. try to edit once more.",
-      "id": 32
-    },
-    {
-      "date": "10/27/2021",
-      "suspect": "Nick Perry",
-      "text": "His console.log wasn't working? Seems pretty sus to me...",
-      "id": 34
-    },
-    {
-      "date": "10/27/2021",
-      "suspect": "testy culls",
-      "text": "test note, lets see what happens",
-      "id": 35
-    },
-    {
-      "date": "10/27/2021",
-      "suspect": "zach",
-      "text": "he lookin sus bruh or something",
-      "id": 36
-    },
-    {
-      "date": "10/28/2021",
-      "suspect": "Andy Birt",
-      "text": "His code might work sometimes but it smells... No one likes smelly spaghetti.. edit: if it works it works tho",
-      "id": 37
-    },
-    {
-      "date": "10/28/2021",
-      "suspect": "Tommy",
-      "text": "Already had lunch but also ate some spaghetti... and it was smell code spaghetti",
-      "id": 38
+      "date": "11/15/2021",
+      "criminalId": "10",
+      "text": "She tested me too",
+      "id": 40
     }
   ]
 }
