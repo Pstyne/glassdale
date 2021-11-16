@@ -1,5 +1,7 @@
 import { getFacilities, useFacilities } from "./FacilityDataProvider.js";
 import { Facility } from "./Facility.js";
+import { getCriminals, useCriminals } from "../criminals/CriminalDataProvider.js";
+import { getCriminalFacilities, useCriminalFacilities } from "./CriminalFacilityProvider.js";
 
 const el = document.querySelector('.main-content');
 
@@ -11,8 +13,13 @@ export const FacilityList = () => {
   let html = '';
   
   getFacilities()
+  .then(getCriminals)
+  .then(getCriminalFacilities)
   .then(() => {
+
     const facilities = useFacilities();
+    const criminals = useCriminals();
+    const criminalFacilities = useCriminalFacilities();
 
     html += `
     <!-- Begin Facility List -->
@@ -21,7 +28,7 @@ export const FacilityList = () => {
       <div class="facility-list flex-container">
     `;
 
-    facilities.forEach( facilityObj => html += Facility(facilityObj));
+    html += render(facilities, criminals, criminalFacilities);
 
     html += `
       </div>
@@ -31,4 +38,12 @@ export const FacilityList = () => {
     el.innerHTML = html;
   });
 
+}
+
+const render = (facilitiesToRender, allCriminals, allRelationships) => {
+  return facilitiesToRender.map(facility => {
+    const criminalsFacilities = allRelationships.filter(cf => cf.facilityId === facility.id);
+    const criminals = criminalsFacilities.map(cf => allCriminals.find(criminal => criminal.id === cf.criminalId));
+    return Facility(facility, criminals);
+  }).join('');
 }
